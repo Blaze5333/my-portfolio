@@ -1,0 +1,480 @@
+/* Skills.css */
+.skills-section {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .skills-intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .skills-intro.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .skills-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .skills-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  /* Tech Grid Styles */
+  .tech-grid-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .tech-grid-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .tech-category-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .tech-category-tabs button {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .tech-category-tabs button:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+  }
+  
+  .tech-category-tabs button.active {
+    color: var(--primary-color);
+  }
+  
+  .tech-category-tabs button.active:after {
+    width: 80%;
+  }
+  
+  .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .tech-hexagon {
+    width: 180px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s forwards;
+    animation-delay: var(--delay);
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .tech-hexagon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  }
+  
+  .tech-hexagon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .hex-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 1;
+  }
+  
+  .tech-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+  
+  .tech-hexagon h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .skill-meter {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+    transition: width 1s ease-out;
+  }
+  
+  /* Soft Skills Styles */
+  .soft-skills-container {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .soft-skills-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .soft-skills-container h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+  
+  .soft-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .soft-skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .soft-skill-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .soft-skill-name {
+    font-weight: 500;
+  }
+  
+  .soft-skill-bar {
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .soft-skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 5px;
+    position: relative;
+    transition: width 1s ease-out;
+  }
+  
+  .skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: -2px;
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* Learning Journey Styles */
+  .learning-journey {
+    margin-top: 60px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .learning-journey.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .learning-journey h3 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+  
+  .learning-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .learning-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px 25px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+  }
+  
+  .learning-item:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .learning-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+  
+  /* Animation Classes */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .skills-showcase {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+    .tech-grid-container {
+      flex: 1 1 60%;
+      min-width: 400px;
+    }
+    
+    .soft-skills-container {
+      flex: 1 1 40%;
+      min-width: 300px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .tech-hexagon {
+      width: 150px;
+      height: 180px;
+    }
+    
+    .learning-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Enhanced Soft Skills Styles */
+.soft-skills-container {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .soft-skills-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .soft-skills-container h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  
+  .soft-skills-container h3:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+  }
+  
+  .soft-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .soft-skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .soft-skill-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .soft-skill-name {
+    font-weight: 500;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .soft-skill-name:before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  
+  .soft-skill-bar {
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .soft-skill-progress {
+    height: 100%;
+    position: relative;
+    border-radius: 6px;
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    background-size: 30px 30px;
+    background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.15) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.15) 75%,
+      transparent 75%,
+      transparent
+    );
+    animation: progress-bar-stripes 1.5s linear infinite;
+  }
+  
+  /* Different colors for each skill */
+  .soft-skill-item:nth-child(1) .soft-skill-progress {
+    background-color: #3498db;
+  }
+  
+  .soft-skill-item:nth-child(2) .soft-skill-progress {
+    background-color: #2ecc71;
+  }
+  
+  .soft-skill-item:nth-child(3) .soft-skill-progress {
+    background-color: #e74c3c;
+  }
+  
+  .soft-skill-item:nth-child(4) .soft-skill-progress {
+    background-color: #f39c12;
+  }
+  
+  .soft-skill-item:nth-child(5) .soft-skill-progress {
+    background-color: #9b59b6;
+  }
+  
+  @keyframes progress-bar-stripes {
+    from {
+      background-position: 30px 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+  .skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: -2px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Added hover effect */
+  .soft-skill-item:hover .soft-skill-progress {
+    filter: brightness(1.1);
+    box-shadow: 0 0 8px rgba(var(--primary-color-rgb), 0.5);
+  }
+  
+  /* Skill label appears on hover */
+  .soft-skill-progress:before {
+    content: attr(data-level);
+    position: absolute;
+    left: 10px;
+    top: -3px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .soft-skill-item:hover .soft-skill-progress:before {
+    opacity: 1;
+  }

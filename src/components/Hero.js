@@ -71,10 +71,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="scroll-down">
-          <span>Scroll Down</span>
-          <div className="chevron"></div>
-        </div>
       </div>
     </section>
   );

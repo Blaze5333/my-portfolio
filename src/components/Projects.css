@@ -218,7 +218,7 @@
   }
   
   .device-screen img, .device-screen video {
-    width: 100%;
+    width: 393px;
     height: 100%;
     object-fit: cover;
   }
@@ -364,3 +364,65 @@
       height: 360px;
     }
   }
+
+
+  /* Update the device-screen styles to handle your specific video dimensions */
+.device-screen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Update video styling to maintain aspect ratio */
+.device-screen img, .device-screen video {
+  width: 393px;
+  height: 851px;
+  object-fit: contain;
+  max-height: 100%;
+  aspect-ratio: 393/851;
+}
+
+/* Adjust the mobile device container to match video aspect ratio */
+.mobile-device {
+  width: 220px;
+  height: 475px; /* Adjusted to better match the 393:851 aspect ratio */
+  background-color: #1a1a1a;
+  border-radius: 30px;
+  padding: 8px;
+  margin: 0 auto;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Adjust the phone mockup for the featured project */
+.phone-mockup {
+  width: 393px;
+  height: 851px; /* Adjusted to match the 393:851 aspect ratio */
+  background-color: #1a1a1a;
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .project-content {
+    padding: 20px;
+  }
+  
+  .mobile-device {
+    width: 180px;
+    height: 388px; /* Maintain the 393:851 aspect ratio at smaller size */
+  }
+}

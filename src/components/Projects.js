@@ -5,7 +5,7 @@ import SynapsisUIMobile from "./assets/videos/synapsisui-mobile.mp4";
 import AppDemo1 from "./assets/videos/app-demo1.mp4"
 import AppImage1 from "./assets/images/app-image1.jpeg"
 import AppDemo2 from "./assets/videos/app-demo2.mp4"
-
+import AppDemo3 from "./assets/videos/app-demo3.mp4"
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
   const [synapsisVideoPlaying, setSynapsisVideoPlaying] = useState(false);
@@ -34,6 +34,17 @@ const Projects = () => {
       codeLink: '#',
       playstore: "https://play.google.com/store/apps/details?id=com.internlinkapp2&hl=en",
       projectType: 'internship'
+    },
+    {
+      id: 3,
+      title: 'StockOut India',
+      image: '/api/placeholder/600/400',
+      videoUrl: AppDemo3, 
+      description: "Stock Out India is a smart platform that helps businesses list their dead stock and connect directly with interested buyers. Whether you're looking to clear unsold inventory or find affordable bulk products, Stock Out India makes the process simple and efficient.",
+      technologies: ['React Native', 'Redux', 'Google-Signin', 'Razorpay', 'PHP'],
+      codeLink: '#',
+      playstore: "https://play.google.com/store/apps/details?id=com.stockoutindia.official",
+      projectType: 'client'
     },
   ];
 

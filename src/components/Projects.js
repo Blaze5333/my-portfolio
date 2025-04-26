@@ -18,7 +18,7 @@ const Projects = () => {
       title: 'Super Steel App',
       image: AppImage1,
       videoUrl: AppDemo1,
-      description: 'A React Native mobile app for buying super steel power tools (made for client)',
+      description: 'Experience the power of precision and reliability with the Super Steel app. Designed to make your tool-ordering experience seamless, the app empowers users to browse, place, and manage orders effortlessly.',
       technologies: ['React Native', 'Redux'],
       codeLink: '#',
       playstore: "https://play.google.com/store/apps/details?id=com.supersteel.official&hl=en",
@@ -44,7 +44,7 @@ const Projects = () => {
       technologies: ['React Native', 'Redux', 'Google-Signin', 'Razorpay', 'PHP'],
       codeLink: '#',
       playstore: "https://play.google.com/store/apps/details?id=com.stockoutindia.official",
-      projectType: 'client'
+      projectType: 'freelance'
     },
   ];
 

@@ -15,17 +15,6 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Super Steel App',
-      image: AppImage1,
-      videoUrl: AppDemo1,
-      description: 'Experience the power of precision and reliability with the Super Steel app. Designed to make your tool-ordering experience seamless, the app empowers users to browse, place, and manage orders effortlessly.',
-      technologies: ['React Native', 'Redux'],
-      codeLink: '#',
-      playstore: "https://play.google.com/store/apps/details?id=com.supersteel.official&hl=en",
-      projectType: 'freelance'
-    },
-    {
-      id: 2,
       title: 'InternLink App',
       image: '/api/placeholder/600/400',
       videoUrl: AppDemo2, 
@@ -36,7 +25,7 @@ const Projects = () => {
       projectType: 'internship'
     },
     {
-      id: 3,
+      id: 2,
       title: 'StockOut India',
       image: '/api/placeholder/600/400',
       videoUrl: AppDemo3, 

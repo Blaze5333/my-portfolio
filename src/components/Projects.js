@@ -20,7 +20,7 @@ const Projects = () => {
       videoUrl: AppDemo2, 
       description: 'AI-powered job platform built from scratch during my internship. Features smart matching algorithms, personalized job recommendations, real-time chat, and an intuitive application tracking system to connect students with the right opportunities.',
       technologies: ['React Native', 'Redux', 'Socket.io', 'AI/ML Integration', 'Node.js'],
-      codeLink: '#',
+   
       playstore: "https://play.google.com/store/apps/details?id=com.internlinkapp2&hl=en",
       projectType: 'internship'
     },
@@ -31,7 +31,7 @@ const Projects = () => {
       videoUrl: AppDemo3, 
       description: "Stock Out India is a smart platform that helps businesses list their dead stock and connect directly with interested buyers. Whether you're looking to clear unsold inventory or find affordable bulk products, Stock Out India makes the process simple and efficient.",
       technologies: ['React Native', 'Redux', 'Google-Signin', 'Razorpay', 'PHP'],
-      codeLink: '#',
+    
       playstore: "https://play.google.com/store/apps/details?id=com.stockoutindia.official",
       projectType: 'freelance'
     },
@@ -249,9 +249,7 @@ const Projects = () => {
                     </div>
                     
                     <div className="project-links">
-                      <a href={project.codeLink} className="project-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-                        <FaGithub /> <span>Code</span>
-                      </a>
+                    
                       {project.playstore && (
                         <a href={project.playstore} className="project-link playstore-link" target="_blank" rel="noopener noreferrer" aria-label="Google Play Store">
                           <FaGooglePlay /> <span>Play Store</span>
